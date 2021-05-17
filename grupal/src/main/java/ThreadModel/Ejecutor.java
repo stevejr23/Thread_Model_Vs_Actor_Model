@@ -1,15 +1,19 @@
 package ThreadModel;
 
 public class Ejecutor {
-    public static void main(String[] args) {
-        Hilo1 Mi1 = new Hilo1();
-        Hilo2 Kha2 = new Hilo2();
+    public static void main(String[] args) throws InterruptedException{
+        Mi1 Khal = new Mi1("LOL");
+        Kha2 lifa = new Kha2("Valorant");
 
         for (int i = 0; i < 3; i++) {
-           // Thread hilo = new Thread(Mi1, String.valueOf(i));
+            Thread hilo = new Thread(Khal, String.valueOf(i));
             hilo.start();
-            if (i== 1)
-
+            hilo.join();
+        }
+        for (int i = 0; i < 3; i++) {
+            Thread hilo = new Thread(lifa, String.valueOf(i));
+            hilo.start();
+            hilo.join();
         }
     }
 }
