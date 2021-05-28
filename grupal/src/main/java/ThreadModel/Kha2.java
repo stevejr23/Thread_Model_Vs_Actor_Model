@@ -1,7 +1,7 @@
 package ThreadModel;
 
 public class Kha2 extends Thread {
-    private String mensaje = "Soy Monkai";
+    private String mensaje;
 
     public Kha2(String mensaje) {
         this.mensaje = mensaje;
